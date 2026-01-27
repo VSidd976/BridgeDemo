@@ -16,7 +16,7 @@ int main()
 
     cout << "\ntv.getChannel(): " << tv.getChannel() << endl;
     cout << "tv.getVolume(): " << tv.getVolume() << endl;
-    cout << "light.getVolume(): " << light.getVolume() << endl;
+    cout << "light.getBrigthness(): " << light.getBrightness() << endl;
 
     BasicRemote<SmartTV> basicRemote(tv);
     VoiceControl<SmartLight> voiceControl(light);
@@ -36,10 +36,10 @@ int main()
     cout << "\ntv.getVolume(): " << tv.getVolume() << endl;
     cout << "tv.getChannel(): " << tv.getChannel() << endl;
 
-    voiceControl.executeCommand("more");
-    voiceControl.executeCommand("more");
+    voiceControl.executeCommand("make more bright");
+    voiceControl.executeCommand("make more bright");
 
-    cout << "\nlight.getVolume(): " << light.getVolume() << endl;
+    cout << "\nlight.getBrightness(): " << light.getBrightness() << endl;
 
     basicRemote.togglePowerUp();
     voiceControl.togglePowerUp();
