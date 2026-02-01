@@ -5,10 +5,10 @@ class IDevice
 public:
     virtual ~IDevice() = default;
 
-    virtual bool isEnabled() = 0;
+    virtual bool isEnabled() const = 0;
     virtual void enable() = 0;
     virtual void disable() = 0;
-    virtual int getVolume() = 0;
+    virtual int getVolume() const = 0;
     virtual void setVolume(int) = 0;
 };
 
@@ -21,11 +21,11 @@ private:
 public:
     SmartLight() = default;
 
-    inline bool isEnabled() override { return _isEnabled; }
+    inline bool isEnabled() const override { return _isEnabled; }
     inline void enable() override { _isEnabled = true; }
     inline void disable() override { _isEnabled = false; }
 
-    inline int getVolume() override { return _brightness; }
+    inline int getVolume() const override { return _brightness; }
     inline void setVolume(int volume) override { _brightness = volume; }
 };
 
@@ -39,11 +39,11 @@ private:
 public:
     SmartTV() = default;
 
-    inline bool isEnabled() override { return _isEnabled; }
+    inline bool isEnabled() const override { return _isEnabled; }
     inline void enable() override { _isEnabled = true; }
     inline void disable() override { _isEnabled = false; }
 
-    inline int getVolume() override {return _volume; }
+    inline int getVolume() const override {return _volume; }
     inline void setVolume(int volume) override { _volume = volume; }
 
     inline int getChannel() { return _channel; }
