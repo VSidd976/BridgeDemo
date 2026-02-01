@@ -46,13 +46,13 @@ public:
 template<class Device>
 void VoiceControl<Device>::executeCommand(const std::string& command)
 {
-    if (command == "make less bright")
+    if (command == "less")
     {
-        this->_device.setBrightness(this->_device.getBrightness() - 30);
+        this->_device.setVolume(this->_device.getVolume() - 1);
     }
-    else if (command == "make more bright")
+    else if (command == "more")
     {
-        this->_device.setBrightness(this->_device.getBrightness() + 30);
+        this->_device.setVolume(this->_device.getVolume() + 1);
     }
     else
     {
