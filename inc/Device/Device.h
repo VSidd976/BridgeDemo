@@ -21,9 +21,9 @@ private:
 public:
     SmartLight() = default;
 
+    inline bool isEnabled() const override { return _isEnabled; }
     inline void enable() override { _isEnabled = true; }
     inline void disable() override { _isEnabled = false; }
-    inline bool isEnabled() const override { return _isEnabled; }
 
     inline int getVolume() const override { return _brightness; }
     inline void setVolume(int volume) override { _brightness = volume; }
@@ -39,9 +39,9 @@ private:
 public:
     SmartTV() = default;
 
+    inline bool isEnabled() const override { return _isEnabled; }
     inline void enable() override { _isEnabled = true; }
     inline void disable() override { _isEnabled = false; }
-    inline bool isEnabled() const override { return _isEnabled; }
 
     inline int getVolume() const override {return _volume; }
     inline void setVolume(int volume) override { _volume = volume; }
