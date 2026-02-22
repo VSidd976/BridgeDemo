@@ -1,6 +1,6 @@
 # BridgeDemo
 
-Demonstration of BridgeDemo Design Pattern.
+Demonstration of Bridge Design Pattern.
 
 ## Instalation
 
